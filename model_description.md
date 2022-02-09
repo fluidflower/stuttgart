@@ -5,47 +5,49 @@ _You may use https://tex-image-link-generator.herokuapp.com/ to render math form
 
 ### PDEs
 
-_E.g._ One mass balance per component water and CO2.
+One mass balance per component water and CO2.
 
 ### Constitutive relations
 
 #### Fluid-matrix interaction
 
-* **Capillary pressure:** _E.g._ Brooks-Corey
+* **Capillary pressure:**  Brooks-Corey
   ![p_c(S_{l}) = p_\text{entry}S_{le}^{-1/\lambda}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+p_c%28S_%7Bl%7D%29+%3D+p_%5Ctext%7Bentry%7DS_%7Ble%7D%5E%7B-1%2F%5Clambda%7D%0A)
 
-* **Relative permeability:** ...
+* **Relative permeability:** Brooks-Corey with endpoints and residual saturations interpreted from the benchmark description
 
 #### Phase composition: Applied equations of state
 
-* **CO2 in liquid phase:** ...
+* **CO2 in liquid phase:**
 
-* **Water in gas phase:** ...
+* **Water in gas phase:**
+
+The composition of the phases is calculated based on a set of relations according to Spycher and Pruess (2005), Duan and Sun (2003), and Spycher, Pruess and Ennis-King (2003)
 
 #### Density
 
-* **Liquid phase:** ...
+* **Liquid phase:** IAPWS
 
-* **Gas phase:** ...
+* **Gas phase:** Span and Wagner (1996)
 
 ### Spatial parameters
 
 _Please provide the relevant facies parameters as a csv file._<br>
-_E.g._ The parameters ![p_\text{entry}, \lambda, S_{lr}, S_{gr}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+p_%5Ctext%7Bentry%7D%2C+%5Clambda%2C+S_%7Blr%7D%2C+S_%7Bgr%7D%0A) for the different facies are given in [spatial_parameters.csv](spatial_parameters.csv).<br>
-_Obviously, the number and type of parameters for your model might differ from the ones in the provided template._
+The parameters we use are given in [stuttgart_materialData.csv](stuttgart_materialData.csv). Some of them are specific to our model and its regularizations for relPerms and capillary pressure relations.
 
 ## Numerics
 
 ### Coupling of flow and transport, temporal and spatial discretization
 
-_E.g._ Fully coupled, fully implicit, cell-centered FV with TPFA.
+Fully coupled, fully implicit, cell-centered FV with TPFA.
 
 ### Linearization and Solvers
 
-_E.g._ Newton with line search, AMG-preconditioned BiCGSTAB for the linear systems.
+Newton with line search, AMG-preconditioned BiCGSTAB for the linear systems.
 
 ### Primary Variables
 
-_E.g._ Dependent on local phase composition:
+Dependent on local phase composition: <br>
 * Both phases present:
-  ![p_l, S_g](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+p_l%2C+S_g%0A)...
+  [p_l, S_g](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+p_l%2C+S_g%0A). <br>
+Where only water phase is present, we use the concentration of CO2 in water as primary variable. A switching algorithm keeps track of changes in phase states.
