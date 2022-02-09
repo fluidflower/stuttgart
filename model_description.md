@@ -43,7 +43,7 @@ Fully coupled, fully implicit, cell-centered FV with TPFA.
 
 ### Linearization and Solvers
 
-Newton with line search, AMG-preconditioned BiCGSTAB for the linear systems.
+Newton with line search, umfpack for the linear systems.
 
 ### Primary Variables
 
