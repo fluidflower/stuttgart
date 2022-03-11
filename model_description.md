@@ -30,6 +30,18 @@ The composition of the phases is calculated based on a set of relations accordin
 
 * **Gas phase:** Span and Wagner (1996)
 
+#### Solubility limit
+
+_Please provide the assumed solubility limit of CO2 in liquid phase at the tank bottom in kg/m<sup>3</sup>._
+
+### Temperature
+
+_Please provide the assumed temperature inside the computational domain in °C._
+
+### Domain volume
+
+_Please provide the assumed total volume of the computational domain in m<sup>3</sup>._
+
 ### Spatial parameters
 
 _Please provide the relevant facies parameters as a csv file._<br>
@@ -51,3 +63,15 @@ Dependent on local phase composition: <br>
 * Both phases present:
   [p_l, S_g](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+p_l%2C+S_g%0A). <br>
 Where only water phase is present, we use the concentration of CO2 in water as primary variable. A switching algorithm keeps track of changes in phase states.
+
+### Computational Grid
+
+_Please provide the number and shape of grid elements._
+
+### Performance
+
+| Indicator                            |  Average |      Min |      Max |
+|:-------------------------------------|---------:|---------:|---------:|
+| time step size [s]                   | 1.23e+56 | 1.23e+56 | 1.23e+56 |
+| # nonlinear iterations per time step |      123 |      123 |      123 |
+| # linear iterations per solve        |      123 |      123 |      123 |
