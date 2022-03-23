@@ -36,7 +36,7 @@ _Please provide the assumed solubility limit of CO2 in liquid phase at the tank 
 
 ### Temperature
 
-_Please provide the assumed temperature inside the computational domain in °C._
+9.87°C (283K)
 
 ### Domain volume
 
