@@ -40,7 +40,7 @@ _Please provide the assumed solubility limit of CO2 in liquid phase at the tank 
 
 ### Domain volume
 
-_Please provide the assumed total volume of the computational domain in m<sup>3</sup>._
+0.08745 m3
 
 ### Spatial parameters
 
