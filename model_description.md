@@ -66,12 +66,12 @@ Where only water phase is present, we use the concentration of CO2 in water as p
 
 ### Computational Grid
 
-_Please provide the number and shape of grid elements._
+structured grid with 26099 rectangular elements
 
 ### Performance
 
 | Indicator                            |  Average |      Min |      Max |
 |:-------------------------------------|---------:|---------:|---------:|
-| time step size [s]                   | 1.23e+56 | 1.23e+56 | 1.23e+56 |
-| # nonlinear iterations per time step |      123 |      123 |      123 |
-| # linear iterations per solve        |      123 |      123 |      123 |
+| time step size [s]                   |    20.44 |    0.021 |      600 |
+| # nonlinear iterations per time step |      7.3 |        2 |       20 |
+| # linear iterations per solve        |      -   |      -   |      -   |
