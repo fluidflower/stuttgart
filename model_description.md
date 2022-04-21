@@ -36,7 +36,7 @@ The composition of the phases is calculated based on a set of relations accordin
 
 ### Temperature
 
-9.87°C (283K)
+20°C (293.15K)
 
 ### Domain volume
 
