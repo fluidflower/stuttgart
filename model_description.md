@@ -32,7 +32,7 @@ The composition of the phases is calculated based on a set of relations accordin
 
 #### Solubility limit
 
-2.366 kg/m3 (we will change temperature to 20°C, in which case our model gives a solubility limit of 1.845)
+1.845 kg/m3
 
 ### Temperature
 
